@@ -27,7 +27,9 @@ class ToDo extends React.Component {
                 checked={this.props.isComplete}
                 onChange={()=>{this.props.handleChange(this.props.id)}}
                 />
-                <h2 style={{margin:0}}>{this.props.name}</h2>
+                <h2 style={{margin:0}}
+                className={this.props.isComplete ? "strikeName" : undefined}
+                >{this.props.name}</h2>
                 <hr/>
             </div>
         );

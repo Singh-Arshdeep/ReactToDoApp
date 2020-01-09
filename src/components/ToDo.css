@@ -6,3 +6,6 @@
     padding: 1%;
     margin-top: 0.2%;
 }
+.strikeName {
+    text-decoration: line-through;
+}
