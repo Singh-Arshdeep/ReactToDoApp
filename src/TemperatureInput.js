@@ -10,7 +10,7 @@ class TemperatureInput extends React.Component {
               <input 
               style={{width:'40%', margin:'auto'}} 
               type="text"
-              onChange={this.props.change}
+              onChange={()=>{this.props.change(this.props.tempType, this.props.val)}}
               value={this.props.val}/>
               
             </div>
