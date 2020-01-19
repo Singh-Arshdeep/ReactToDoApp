@@ -37,7 +37,9 @@ class TemperatureCalculator extends React.Component {
         return(
             <div>
                 <TemperatureInput tempType="Celcius" change={this.handleChange}
-                val={this.state.Ctemp}/>
+                val={this.state.Ctemp}>
+                    <p>Well hello there! I am composition</p>
+                </TemperatureInput>
                 <TemperatureInput tempType="Fahrenheit" change={this.handleChange}
                 val={this.state.Ftemp}
                 />
