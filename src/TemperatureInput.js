@@ -6,7 +6,6 @@ class TemperatureInput extends React.Component {
         return(
             <div style={{border:'solid',width:'50%', margin:'auto', padding:30}}>
               {this.props.tempType} 
-              
               <input 
               style={{width:'40%', margin:'auto'}} 
               type="text"

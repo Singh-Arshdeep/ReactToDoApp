@@ -1,6 +1,7 @@
 import React from 'react';
 import TemperatureInput from './TemperatureInput';
-
+import toDoListData from './toDoListData';
+import Todo from './Todo';
 class TemperatureCalculator extends React.Component {
     
     constructor() {
@@ -9,6 +10,10 @@ class TemperatureCalculator extends React.Component {
             Ctemp:"",
             Ftemp:""
         }
+    }
+
+    componentDidMount() {
+        console.log(toDoListData);
     }
 
     handleChange=(tempType, tempVal) => {
@@ -44,6 +49,7 @@ class TemperatureCalculator extends React.Component {
                 val={this.state.Ftemp}
                 />
                 <div>{ (this.state.Ctemp>=100)?"Water will boil":"Not boiling"}</div>
+                <Todo/>
             </div>
         );
     }
