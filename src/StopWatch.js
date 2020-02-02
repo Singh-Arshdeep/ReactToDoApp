@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 
+let lapMin = [];
+let lapSec = [];
 export default function StopWatch() {
     const [sec, setSec] = useState(0);
     const [min, setMin] = useState(0);
@@ -10,23 +12,20 @@ export default function StopWatch() {
         setTimeout(handleClick, 1000);
     }
 
-    let lapArr = [];
     let handleLap = ()=> {
         setLap(prev => prev + 1);
-        lapArr.push({
-            "sec":{sec},
-            "min":{min}
-        });
-        console.log(lapArr);
+        lapSec.push(sec);
+        lapMin.push(min);
+        console.log(lapSec);
     }
-
+    
     useEffect(()=>{
         if(sec==11) {
             setSec(0);
             setMin(prev=>prev+1);
         }
 
-    });
+    }, []);
 
     return(
         <div>
@@ -38,7 +37,7 @@ export default function StopWatch() {
             <hr/>
             {lap}
             <hr/>
-            {lapArr.sec}
+            ->{lapSec[lap-1]}
         </div>
     );
 }
