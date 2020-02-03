@@ -11,12 +11,12 @@ export default function StopWatch() {
         setSec(prevTime => prevTime + 1);
         setTimeout(handleClick, 1000);
     }
-
+    var divList = null;
     let handleLap = ()=> {
         setLap(prev => prev + 1);
         lapSec.push(sec);
         lapMin.push(min);
-        console.log(lapSec);
+        divList.push(<div>Hi</div>);
     }
     
     useEffect(()=>{
@@ -37,7 +37,8 @@ export default function StopWatch() {
             <hr/>
             {lap}
             <hr/>
-            ->{lapSec[lap-1]}
+            {divList}
+            ->{lapSec}
         </div>
     );
 }
