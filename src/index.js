@@ -9,10 +9,11 @@ import TemperatureCalculator from './TemperatureCalculator';
 //import AppConditionalRenderLogIn from './AppConditionalRenderLogIn';
 import * as serviceWorker from './serviceWorker';
 import StopWatch from './StopWatch';
+import SocialCard from './components/SocialCard';
 //ReactDOM.render(<AppConditionalRenderLogIn />, document.getElementById('root'));
 //ReactDOM.render(<AppFetch />, document.getElementById('root'));
-ReactDOM.render(<StopWatch />, document.getElementById('root'));
+ReactDOM.render(<SocialCard />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister(); 
+serviceWorker.unregister();  
